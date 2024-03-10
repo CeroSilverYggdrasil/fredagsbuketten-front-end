@@ -8,6 +8,7 @@ function Layout() {
         <div className="flex justify-around px-10 py-2 gap-x-4">
             <Link to="/about">About</Link>
             <Link to="/">Home</Link>
+            <Link to="/admin">Admin</Link>
         </div>
       </header>
       <Outlet />

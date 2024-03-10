@@ -1,4 +1,5 @@
 import React from "react";
+import ProductGrid from "../components/ProductGrid";
 
 function Home() {
   return (
@@ -6,6 +7,7 @@ function Home() {
       <div className="flex text-white justify-center py-72">
           <h1 className="font-bold text-6xl">Fredagsbuketten</h1>
       </div>
+      <ProductGrid />
     </div>
   );
 }
