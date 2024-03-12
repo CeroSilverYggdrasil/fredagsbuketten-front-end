@@ -9,7 +9,7 @@ function ProductCard({ product }) {
       <div className="p-8">
         {product.name}
         <div>{product.price}</div>
-        <div className="flex flex-wrap mt-4 ">
+        <div className="flex flex-wrap mt-4">
           <p className="px-4 py-2 my-2 mr-2 bg-gray-100 border-solid border-black border">
             {product.description}
           </p>
