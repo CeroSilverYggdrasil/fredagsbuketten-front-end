@@ -122,14 +122,17 @@ const products = [
   // Add more products as needed
 ];
 
-function ProductGrid() {
+const size = 8;
+const ProductList = products.slice(0, size);
+
+function HomeGrid() {
   return (
     <div className="grid grid-cols-4 grid-rows-2 font-semibold m-auto p-2 gap-4">
-      {products.map((product) => {
+      {ProductList.map((product) => {
         return <ProductCard product={product} />;
       })}
     </div>
   );
 }
 
-export default ProductGrid;
+export default HomeGrid;

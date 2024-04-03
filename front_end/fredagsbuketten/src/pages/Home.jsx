@@ -1,6 +1,6 @@
 import React from "react";
-import ProductGrid from "../components/ProductGrid";
 import { Link } from "react-router-dom";
+import HomeGrid from "../components/HomeGrid";
 
 function Home() {
   return (
@@ -16,7 +16,7 @@ function Home() {
           </p>
         </div>
       </div>
-      <ProductGrid />
+      <HomeGrid />
       <div className="flex justify-center py-6 border font-semibold border-solid w-40 bg-white m-auto hover:bg-slate-500 hover:text-white hover:transition-all rounded-xl">
         <Link to="/products">Alla Produkter</Link>
       </div>
