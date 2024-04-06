@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import useAuthStore from "src/stores/store";
+import useAuthStore from "../stores/store";
 import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
@@ -52,7 +52,7 @@ export default function LoginForm() {
       formData.append("password", password);
 
       try {
-        const response = await fetch("http://localhost:8000/user/token", {
+        const response = await fetch("http://localhost:8000/admin/token", {
           method: "POST",
           body: formData,
         });

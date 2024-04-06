@@ -14,9 +14,6 @@ function ProductCard({ product }) {
             {product.description}
           </p>
         </div>
-        {product.isInStock === false && (
-          <div className="text-red-500">Not in stock</div>
-        )}
         {
           <button
             // onClick={() => handleBuy(product)}

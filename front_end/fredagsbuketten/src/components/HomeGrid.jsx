@@ -8,7 +8,7 @@ const products = [
     price: 19.99,
     description:
       "BLABALBSKdlnskladkslad kshaklflahdlsakldnkslandkl sakflnaklfkslandklshadklsnaklds nakldnkslandklsandkslandkl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -17,7 +17,7 @@ const products = [
     price: 24.99,
     description:
       "sjaklfkslahdksnakf lsnaklndklsnakl dnsklafnksofdsnfldnsklfnsl andlsnkadlskaldnksalndklas",
-    isInStock: false,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -26,7 +26,7 @@ const products = [
     price: 69.99,
     description:
       "ashdklsjklfbhdjlas fbjlasdjlsnlandlksaklfnakld fnsklanfklandklsnkdlsaklfnsak lfnsklanfklsaksfklsafakl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -35,7 +35,7 @@ const products = [
     price: 19.99,
     description:
       "BLABALBSKdlnskladkslad kshaklflahdlsakldnkslandkl sakflnaklfkslandklshadklsnaklds nakldnkslandklsandkslandkl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -44,7 +44,7 @@ const products = [
     price: 24.99,
     description:
       "sjaklfkslahdksnakf lsnaklndklsnakl dnsklafnksofdsnfldnsklfnsl andlsnkadlskaldnksalndklas",
-    isInStock: false,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -53,7 +53,7 @@ const products = [
     price: 69.99,
     description:
       "ashdklsjklfbhdjlas fbjlasdjlsnlandlksaklfnakld fnsklanfklandklsnkdlsaklfnsak lfnsklanfklsaksfklsafakl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -62,7 +62,7 @@ const products = [
     price: 19.99,
     description:
       "BLABALBSKdlnskladkslad kshaklflahdlsakldnkslandkl sakflnaklfkslandklshadklsnaklds nakldnkslandklsandkslandkl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -71,7 +71,7 @@ const products = [
     price: 24.99,
     description:
       "sjaklfkslahdksnakf lsnaklndklsnakl dnsklafnksofdsnfldnsklfnsl andlsnkadlskaldnksalndklas",
-    isInStock: false,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -80,7 +80,7 @@ const products = [
     price: 19.99,
     description:
       "BLABALBSKdlnskladkslad kshaklflahdlsakldnkslandkl sakflnaklfkslandklshadklsnaklds nakldnkslandklsandkslandkl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -89,7 +89,7 @@ const products = [
     price: 24.99,
     description:
       "sjaklfkslahdksnakf lsnaklndklsnakl dnsklafnksofdsnfldnsklfnsl andlsnkadlskaldnksalndklas",
-    isInStock: false,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -98,7 +98,7 @@ const products = [
     price: 69.99,
     description:
       "ashdklsjklfbhdjlas fbjlasdjlsnlandlksaklfnakld fnsklanfklandklsnkdlsaklfnsak lfnsklanfklsaksfklsafakl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -107,7 +107,7 @@ const products = [
     price: 19.99,
     description:
       "BLABALBSKdlnskladkslad kshaklflahdlsakldnkslandkl sakflnaklfkslandklshadklsnaklds nakldnkslandklsandkslandkl",
-    isInStock: true,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   {
@@ -116,7 +116,7 @@ const products = [
     price: 24.99,
     description:
       "sjaklfkslahdksnakf lsnaklndklsnakl dnsklafnksofdsnfldnsklfnsl andlsnkadlskaldnksalndklas",
-    isInStock: false,
+    type_id: 1,
     imageUrl: "https://www.pexels.com/photo/2559941/download/", // Placeholder for direct image URL
   },
   // Add more products as needed
