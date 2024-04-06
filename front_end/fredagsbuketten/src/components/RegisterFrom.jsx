@@ -10,11 +10,8 @@ export default function EmailRegisterForm() {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState([]);
 
-  const [firstName, setFirstName] = useState("");
-  const [firstNameError, setFirstNameError] = useState([]);
-
-  const [lastName, setLastName] = useState("");
-  const [lastNameError, setLastNameError] = useState([]);
+  const [username, setUsername] = useState("");
+  const [usernameError, setUsernameError] = useState([]);
 
   const [terms, setTerms] = useState(false);
   const [termsError, setTermsError] = useState("");
@@ -46,20 +43,12 @@ export default function EmailRegisterForm() {
     setPasswordError(passwordErrors);
   }
 
-  function validateFirstName() {
+  function validateusername() {
     let errors = [];
-    if (!firstName) {
+    if (!username) {
       errors.push("First name is required");
     }
-    setFirstNameError(errors);
-  }
-
-  function validateLastName() {
-    let errors = [];
-    if (!lastName) {
-      errors.push("Last name is required");
-    }
-    setLastNameError(errors);
+    setUsernameError(errors);
   }
 
   function validateTerms() {
@@ -72,17 +61,15 @@ export default function EmailRegisterForm() {
 
   async function submitRegister(e) {
     e.preventDefault();
+    validateusername();
     validateEmail();
     validatePassword();
-    validateFirstName();
-    validateLastName();
     validateTerms();
 
     if (
+      usernameError.length === 0 &&
       emailError.length === 0 &&
       passwordError.length === 0 &&
-      firstNameError.length === 0 &&
-      lastNameError.length === 0 &&
       !termsError
     ) {
       try {
@@ -92,9 +79,8 @@ export default function EmailRegisterForm() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            username,
             email,
-            first_name: firstName,
-            last_name: lastName,
             hashed_password: password,
           }),
         });
@@ -102,7 +88,7 @@ export default function EmailRegisterForm() {
 
         if (response.status === 201) {
           console.log("Success");
-          navigate("/login");
+          navigate("/");
         } else {
           console.log("Something went wrong");
           //   Log the response json to the console
@@ -125,6 +111,33 @@ export default function EmailRegisterForm() {
             <form className="space-y-6" onSubmit={submitRegister}>
               <div>
                 <label
+                  htmlFor="username"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Username
+                </label>
+                <div className="mt-1">
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    // autoComplete="given-name"
+                    required
+                    className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    onBlur={validateusername}
+                  />
+                  {usernameError.map((error, index) => (
+                    <p key={index} className="mt-2 text-sm text-red-600">
+                      {error}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700"
                 >
@@ -143,60 +156,6 @@ export default function EmailRegisterForm() {
                     onBlur={validateEmail}
                   />
                   {emailError.map((error, index) => (
-                    <p key={index} className="mt-2 text-sm text-red-600">
-                      {error}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="first_name"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  First Name
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="first_name"
-                    name="first_name"
-                    type="text"
-                    autoComplete="given-name"
-                    required
-                    className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    onBlur={validateFirstName}
-                  />
-                  {firstNameError.map((error, index) => (
-                    <p key={index} className="mt-2 text-sm text-red-600">
-                      {error}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="last_name"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Last Name
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="last_name"
-                    name="last_name"
-                    type="text"
-                    autoComplete="family-name"
-                    required
-                    className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    onBlur={validateLastName}
-                  />
-                  {lastNameError.map((error, index) => (
                     <p key={index} className="mt-2 text-sm text-red-600">
                       {error}
                     </p>
