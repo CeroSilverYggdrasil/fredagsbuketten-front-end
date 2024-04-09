@@ -5,20 +5,23 @@ import HomeGrid from "../components/HomeGrid";
 function Home() {
   return (
     <div>
-      <header className="flex h-20 border-b bg-zinc-900 text-white">
-        <div className="flex justify-around px-10 py-2 gap-x-4">
-          <Link to="/" className="hover:underline hover:transition-all">
-            Home
-          </Link>
-          <Link to="/products" className="hover:underline hover:transition-all">
-            Products
-          </Link>
-          <Link to="/admin" className="hover:underline hover:transition-all">
-            Admin
-          </Link>
-        </div>
-      </header>
       <div className="flex flex-col min-h-screen bg-[url('https://usercontent.one/wp/www.underbarablomster.se/wp-content/uploads/2019/08/img_hero_001.jpg')]">
+        <header className="flex h-20 text-white">
+          <div className="flex justify-around px-10 py-2 gap-x-4">
+            <Link to="/" className="hover:underline hover:transition-all">
+              Home
+            </Link>
+            <Link
+              to="/products"
+              className="hover:underline hover:transition-all"
+            >
+              Products
+            </Link>
+            <Link to="/admin" className="hover:underline hover:transition-all">
+              Admin
+            </Link>
+          </div>
+        </header>
         <div className="flex text-white justify-center pt-72">
           <div>
             <h1 className="font-bold text-6xl">Fredagsbuketten</h1>
