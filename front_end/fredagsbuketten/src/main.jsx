@@ -11,6 +11,7 @@ import AdminRegister from "./pages/AdminRegister";
 import AdminDashboard from "./pages/AdminDashboard";
 import CreateCustomer from "./pages/CreateCustomer";
 import PaymentExample from "./pages/PaymentExample";
+import CustomerDashboard from "./pages/CustomersDashboard";
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
         <Route path="/admin_dashboard" element={<AdminDashboard />}></Route>
         <Route path="/create_customer" element={<CreateCustomer />}></Route>
         <Route path="/payment_example" element={<PaymentExample />}></Route>
+        <Route
+          path="/customer_dashboard"
+          element={<CustomerDashboard />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

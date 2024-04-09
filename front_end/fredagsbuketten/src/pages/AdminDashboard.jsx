@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Products() {
+function AdminDashboard() {
   const [products, setProducts] = useState([]);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -151,6 +151,12 @@ function Products() {
           >
             Dashboard
           </Link>
+          <Link
+            to="/customer_dashboard"
+            className="hover:underline hover:transition-all"
+          >
+            Customers
+          </Link>
         </div>
       </header>
       <div className="min-w-xl">
@@ -234,7 +240,7 @@ function Products() {
                         />
                       </div>
                     </div>
-                    {/* Start Date */}
+                    {/* Add Img */}
                     <div className="sm:col-span-3">
                       <label
                         htmlFor="start-date"
@@ -253,7 +259,7 @@ function Products() {
                         />
                       </div>
                     </div>
-                    {/* End Date */}
+                    {/* Add Type id */}
                     <div className="sm:col-span-3">
                       <label
                         htmlFor="end-date"
@@ -404,4 +410,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default AdminDashboard;
