@@ -102,7 +102,7 @@ export default function CustomerForm() {
       addressError.length === 0 &&
       cityError.length === 0 &&
       mobileError.length === 0 &&
-      zipCode.length === 0
+      zipCodeError.length === 0
     ) {
       try {
         const response = await fetch("http://localhost:8000/customer", {
@@ -111,20 +111,20 @@ export default function CustomerForm() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            firstName,
-            lastName,
-            email,
-            address,
-            city,
-            mobile,
-            zipCode,
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            address: address,
+            city: city,
+            mobile: mobile,
+            zip_code: zipCode,
           }),
         });
         const data = await response.json();
 
         if (response.status === 201) {
           console.log("Success");
-          navigate("/");
+          navigate("/payment_example");
         } else {
           console.log("Something went wrong");
           //   Log the response json to the console

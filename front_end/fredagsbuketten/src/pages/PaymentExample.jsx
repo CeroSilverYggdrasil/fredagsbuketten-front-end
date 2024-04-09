@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CustomerForm from "../components/CustomerForm";
 
-function CreateCustomer() {
+function PaymentExample() {
   return (
     <div>
       <header className="flex h-20 border-b bg-zinc-900 text-white">
@@ -22,14 +21,13 @@ function CreateCustomer() {
         <div className="mt-10">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
             <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">
-              Lägg in din info
+              Betalning :D
             </h2>
           </div>
-          <CustomerForm />
         </div>
       </div>
     </div>
   );
 }
 
-export default CreateCustomer;
+export default PaymentExample;

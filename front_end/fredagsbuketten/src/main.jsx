@@ -10,6 +10,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminRegister from "./pages/AdminRegister";
 import AdminDashboard from "./pages/AdminDashboard";
 import CreateCustomer from "./pages/CreateCustomer";
+import PaymentExample from "./pages/PaymentExample";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         ></Route>
         <Route path="/admin_dashboard" element={<AdminDashboard />}></Route>
         <Route path="/create_customer" element={<CreateCustomer />}></Route>
+        <Route path="/payment_example" element={<PaymentExample />}></Route>
       </Routes>
     </BrowserRouter>
   );
