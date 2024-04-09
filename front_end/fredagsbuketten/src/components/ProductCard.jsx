@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
   return (
@@ -15,12 +16,12 @@ function ProductCard({ product }) {
           </p>
         </div>
         {
-          <button
-            // onClick={() => handleBuy(product)}
+          <Link
             className="px-4 py-2 shadow-md rounded-xl hover:bg-gray-300 hover:transition-all"
+            to="/create_customer"
           >
             Köp
-          </button>
+          </Link>
         }
       </div>
     </div>
